@@ -25,7 +25,7 @@ if selectground == "create":
     filenameforgnd = input("File Name ---> ")
     with open(filenameforgnd + ".gnd", "w") as file:
         file.write("gndstart\n\n\n\ngndend")
-    print("Your File was Created Successfully", " File --->",filenameforgnd,".gnd") 
+    print("Your File was Created Successfully", " File --->", filenameforgnd, ".gnd")
     time.sleep(9999)
 if selectground == "run":
     filenamegnd = input("File Name ---> ")
@@ -35,7 +35,7 @@ if selectground == "run":
     except:
         print("There is no such file!")
         filenamegnd = input("File Name ---> ")
-    
+
     with open(filenamegnd + ".gnd") as filegnd2:
         print("Your File is Running...\n---------------------------")
         read = filegnd2.readlines()
@@ -48,21 +48,20 @@ if selectground == "run":
                     ifmain = True
                 if rood == "gndend\n":
                     break
-                
-                
+
                 if "printg() = " in rood and ifmain == True:
-                        rood = rood.replace("printg() = ","")
-                        rood = rood.replace("\n","")
-                        print(rood)
-                        time.sleep(9999)
-                        
+                    rood = rood.replace("printg() = ", "")
+                    rood = rood.replace("\n", "")
+                    print(rood)
+                    time.sleep(9999)
+
                 if "pug() = " in rood and ifmain == True:
-                        rood = rood.replace("pug() = ","")
-                        rood = rood.replace("\n","")
-                        popupground = tk.Tk()
-                        popupground.title(rood)
-                        popupground.mainloop()
-                        
+                    rood = rood.replace("pug() = ", "")
+                    rood = rood.replace("\n", "")
+                    popupground = tk.Tk()
+                    popupground.title(rood)
+                    popupground.mainloop()
+
                 if "gndclose()" in rood:
                     break
                 if "errorg()" in rood and ifmain == True:
@@ -74,24 +73,24 @@ if selectground == "run":
                     groundnormalpopup.geometry("500x500")
                     groundnormalpopup.mainloop()
                 if "depositg(a) = " in rood and ifmain == True:
-                    rood = rood.replace("depositg(a) = ","")
-                    rood = rood.replace("\n","")
+                    rood = rood.replace("depositg(a) = ", "")
+                    rood = rood.replace("\n", "")
                     depositga = rood
                 if "depositg(b) = " in rood and ifmain == True:
-                    rood = rood.replace("depositg(b) = ","")
-                    rood = rood.replace("\n","")
+                    rood = rood.replace("depositg(b) = ", "")
+                    rood = rood.replace("\n", "")
                     depositgb = rood
                 if "depositg(c) = " in rood and ifmain == True:
-                    rood = rood.replace("depositg(c) = ","")
-                    rood = rood.replace("\n","")
+                    rood = rood.replace("depositg(c) = ", "")
+                    rood = rood.replace("\n", "")
                     depositgc = rood
                 if "depositg(d) = " in rood and ifmain == True:
-                    rood = rood.replace("depositg(d) = ","")
-                    rood = rood.replace("\n","")
+                    rood = rood.replace("depositg(d) = ", "")
+                    rood = rood.replace("\n", "")
                     depositgd = rood
                 if "depositg(e) = " in rood and ifmain == True:
-                    rood = rood.replace("depositg(e) = ","")
-                    rood = rood.replace("\n","")
+                    rood = rood.replace("depositg(e) = ", "")
+                    rood = rood.replace("\n", "")
                     depositge = rood
                 if "printg(depositg(a))" in rood and ifmain == True:
                     print(depositga)
@@ -109,8 +108,8 @@ if selectground == "run":
                     print(depositge)
                     time.sleep(9999)
                 if "pingg() = " in rood and ifmain == True:
-                    rood = rood.replace("pingg() = ","")
-                    rood = rood.replace("\n","")
+                    rood = rood.replace("pingg() = ", "")
+                    rood = rood.replace("\n", "")
                     os.system("ping " + rood)
                     time.sleep(9999)
                 if "pingg(depositg(a))" in rood and ifmain == True:
@@ -128,6 +127,26 @@ if selectground == "run":
                 if "pingg(depositg(e))" in rood and ifmain == True:
                     os.system("ping " + depositge)
                     time.sleep(9999)
+                if "inputg(depositg(a)) = " in rood and ifmain == True:
+                    rood = rood.replace("inputg(depositg(a)) = ", "")
+                    rood = rood.replace("\n", "")
+                    depositga = input(rood + " ---> ")
+                if "inputg(depositg(b)) = " in rood and ifmain == True:
+                    rood = rood.replace("inputg(depositg(b)) = ", "")
+                    rood = rood.replace("\n", "")
+                    depositgb = input(rood + " ---> ")
+                if "inputg(depositg(c)) = " in rood and ifmain == True:
+                    rood = rood.replace("inputg(depositg(c)) = ", "")
+                    rood = rood.replace("\n", "")
+                    depositgc = input(rood + " ---> ")
+                if "inputg(depositg(d)) = " in rood and ifmain == True:
+                    rood = rood.replace("inputg(depositg(d)) = ", "")
+                    rood = rood.replace("\n", "")
+                    depositgd = input(rood + " ---> ")
+                if "inputg(depositg(e)) = " in rood and ifmain == True:
+                    rood = rood.replace("inputg(depositg(e)) = ", "")
+                    rood = rood.replace("\n", "")
+                    depositge = input(rood + " ---> ")
                 i += 1
             except:
                 break       
