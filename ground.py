@@ -34,10 +34,10 @@ if selectground == "run":
             pass
     except:
         print("There is no such file!")
-        filenamegnd = input("File Name ---> ")
+        time.sleep(9999)
 
     with open(filenamegnd + ".gnd") as filegnd2:
-        print("Your File is Running...\n---------------------------")
+        print("Running Your Ground Programming Language...\n---------------------------")
         read = filegnd2.readlines()
         i = 0
         ifmain = False
